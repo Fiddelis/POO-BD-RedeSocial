@@ -1,0 +1,5 @@
+br\com\inatel\models\Usuario.class
+br\com\inatel\Main.class
+br\com\inatel\models\Postagem.class
+br\com\inatel\models\Amigos.class
+br\com\inatel\models\PerfilUsuario.class
