@@ -34,4 +34,13 @@ public class Postagem {
     public void setEmailUsuario(String emailUsuario) {
         this.emailUsuario = emailUsuario;
     }
+
+    @Override
+    public String toString() {
+        return "Postagem{" +
+                "dataPublicacao='" + dataPublicacao + '\'' +
+                ", conteudo='" + conteudo + '\'' +
+                ", emailUsuario='" + emailUsuario + '\'' +
+                '}';
+    }
 }
