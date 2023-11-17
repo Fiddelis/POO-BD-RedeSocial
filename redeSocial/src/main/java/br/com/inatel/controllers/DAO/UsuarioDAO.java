@@ -9,7 +9,7 @@ public class UsuarioDAO extends ConnectionDAO {
 
     public boolean insertUsuario(Usuario usuario) { //CREATE
         connectToDB();
-        String sql = "INSERT INTO usuario() values(?,?,?,?)";
+        String sql = "INSERT INTO usuario() VALUES(?,?,?,?)";
         try {
             pst = con.prepareStatement(sql);
             pst.setString(1, usuario.getEmail());

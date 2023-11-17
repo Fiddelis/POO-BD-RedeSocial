@@ -26,6 +26,12 @@ public class Postagem {
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
     }
-    
-    
+
+    public String getEmailUsuario() {
+        return emailUsuario;
+    }
+
+    public void setEmailUsuario(String emailUsuario) {
+        this.emailUsuario = emailUsuario;
+    }
 }

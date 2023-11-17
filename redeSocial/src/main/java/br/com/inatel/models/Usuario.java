@@ -28,4 +28,14 @@ public class Usuario {
     public String getSenha() {
         return senha;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
+    }
 }

@@ -27,4 +27,4 @@ VALUES
   ('usuario2@email.com', 'Escritor noturno que transforma pensamentos em palavras. Apaixonado por viagens e colecionador de memórias.', 'Localizacao2'),
   ('usuario3@email.com', 'Entusiasta da tecnologia e defensor da sustentabilidade. Sempre em busca de soluções inovadoras para o futuro.', 'Localizacao3');
 
-SELECT * FROM `usuario`;
+SELECT * FROM `postagem` ORDER BY `data_publicacao` DESC LIMIT 10;
