@@ -11,6 +11,6 @@ public class PostagemController {
     
     public ArrayList<Postagem> getPostagens() {
         PostagemDAO postagem = new PostagemDAO();
-
+        return postagem.selectUltimasPostagens();
     }
 }
