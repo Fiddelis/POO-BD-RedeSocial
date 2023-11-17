@@ -1,8 +1,9 @@
 package br.com.inatel.controllers.DAO;
 
 public class LoginController {
-    public static String emailLogin;
-    public static String nomeLogin;
+    private String emailLogin;
+    private String senhaLogin;
+
     public void registro() {
 
     }
