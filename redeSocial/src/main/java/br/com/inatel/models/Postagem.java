@@ -15,32 +15,18 @@ public class Postagem {
         return dataPublicacao;
     }
 
-    public void setDataPublicacao(String dataPublicacao) {
-        this.dataPublicacao = dataPublicacao;
-    }
-
     public String getConteudo() {
         return conteudo;
-    }
-
-    public void setConteudo(String conteudo) {
-        this.conteudo = conteudo;
     }
 
     public String getEmailUsuario() {
         return emailUsuario;
     }
 
-    public void setEmailUsuario(String emailUsuario) {
-        this.emailUsuario = emailUsuario;
-    }
-
     @Override
     public String toString() {
-        return "Postagem{" +
-                "dataPublicacao='" + dataPublicacao + '\'' +
-                ", conteudo='" + conteudo + '\'' +
-                ", emailUsuario='" + emailUsuario + '\'' +
-                '}';
+        return dataPublicacao + '\n' +
+                emailUsuario + '\n' +
+                "     " + conteudo + '\n';
     }
 }
