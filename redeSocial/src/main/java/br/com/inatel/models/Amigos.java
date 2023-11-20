@@ -16,4 +16,9 @@ public class Amigos {
     public String getUsuarioEmail1() {
         return usuarioEmail1;
     }
+
+    @Override
+    public String toString() {
+        return usuarioEmail1;
+    }
 }

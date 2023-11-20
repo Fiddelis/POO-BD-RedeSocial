@@ -17,16 +17,14 @@ public class Perfil {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 
     public String getLocalizacao() {
         return localizacao;
     }
 
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    @Override
+    public String toString() {
+        return "Descricao: " + descricao + '\n' +
+                "Localizacao: " + localizacao;
     }
-    
 }

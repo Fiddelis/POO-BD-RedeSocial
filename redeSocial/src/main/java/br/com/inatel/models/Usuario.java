@@ -35,7 +35,6 @@ public class Usuario {
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
-                ", senha='" + senha + '\'' +
                 '}';
     }
 }
