@@ -7,13 +7,14 @@ import java.sql.SQLException;
 public class PerfilDAO extends ConnectionDAO {
         boolean sucesso;
 
-    public boolean insertPerfil(Perfil perfil) { //CREATE
+    public boolean insertPerfil(Perfil perfil, String emailUsuario) { //CREATE
         connectToDB();
-        String sql = "INSERT INTO perfil() values(?,?)";
+        String sql = "INSERT INTO perfil() values(?,?,?)";
         try {
             pst = con.prepareStatement(sql);
-            pst.setString(1, perfil.getDescricao());
-            pst.setString(2, perfil.getLocalizacao());
+            pst.setString(1, emailUsuario);
+            pst.setString(2, perfil.getDescricao());
+            pst.setString(3, perfil.getLocalizacao());
             pst.execute();
             sucesso = true;
         } catch (SQLException exc) {
@@ -30,7 +31,7 @@ public class PerfilDAO extends ConnectionDAO {
         return sucesso;
     }
 
-    public Perfil selectPerfil(String email) { //Read
+    public Perfil selectPerfil(String email) {
         connectToDB();
         String sql = "SELECT * FROM `perfil` WHERE `usuario_email`=?";
         Perfil perfil = null;
@@ -49,7 +50,6 @@ public class PerfilDAO extends ConnectionDAO {
         } finally {
             try {
                 con.close();
-                //st.close();
             } catch (SQLException e) {
                 System.out.println("Erro: " + e.getMessage());
             }

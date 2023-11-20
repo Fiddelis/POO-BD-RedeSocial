@@ -42,7 +42,7 @@ public class UsuarioDAO extends ConnectionDAO {
             pst.setString(1, email);
             rs = pst.executeQuery();
             if(rs != null && rs.next()){
-                usuario = new Usuario(rs.getString("nome"),rs.getString("email"),rs.getString("data_nascimento"),"*****");
+                usuario = new Usuario(rs.getString("nome"),rs.getString("email"),rs.getString("data_nascimento"),rs.getString("senha"));
             }
             sucesso = true;
         } catch (SQLException e) {
