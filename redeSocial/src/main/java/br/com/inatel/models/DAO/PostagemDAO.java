@@ -1,4 +1,4 @@
-package br.com.inatel.controllers.DAO;
+package br.com.inatel.models.DAO;
 
 import br.com.inatel.models.Postagem;
 
