@@ -25,8 +25,7 @@ public class Postagem {
 
     @Override
     public String toString() {
-        return dataPublicacao + '\n' +
-                emailUsuario + '\n' +
-                "     " + conteudo + '\n';
+        return dataPublicacao + " | " + emailUsuario + '\n' +
+                "     " + conteudo;
     }
 }
