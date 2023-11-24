@@ -1,29 +1,31 @@
 package br.com.inatel.views;
 
 import br.com.inatel.Main;
-import br.com.inatel.controllers.LoginController;
+import br.com.inatel.controllers.UsuarioController;
 
 public class TelaLogin extends Tela {
     public void exibir() {
         String emailLogin, senhaLogin;
         boolean verificado = false;
-        LoginController login = new LoginController();
+        UsuarioController login = new UsuarioController();
 
-        System.out.println("------------ENTRAR------------");
+        System.out.println();
+        printAmarelo("------------ENTRAR------------");
+        System.out.println();
         System.out.print("Email: ");
         emailLogin = Main.sc.nextLine();
         System.out.print("Senha: ");
         senhaLogin = Main.sc.nextLine();
 
-        verificado = login.entrar(emailLogin, senhaLogin);
+        verificado = login.loginUsuario(emailLogin, senhaLogin);
 
         if(verificado) {
-            System.out.println("ENTROU COM SUCESSO!");
+            printVerde("ENTROU COM SUCESSO!");
             TelaUsuario telaUsuario = new TelaUsuario();
             emailUsuario = emailLogin;
             telaUsuario.exibir();
         } else {
-            System.out.println("EMAIL OU SENHA INCORRETA.");
+            printVermelho("EMAIL OU SENHA INCORRETA.");
             TelaInicial telaInicial = new TelaInicial();
             telaInicial.exibir();
         }
