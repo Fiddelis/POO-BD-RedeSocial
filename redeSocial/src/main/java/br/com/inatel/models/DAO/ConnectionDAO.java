@@ -5,7 +5,6 @@ import java.sql.*;
 public abstract class ConnectionDAO {
     Connection con; //connection
     PreparedStatement pst; // (query) - SQL code
-    Statement st; // (query) - SQL code
     ResultSet rs; //response
 
     private final String database = "redesocialbd";

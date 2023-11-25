@@ -12,10 +12,14 @@ public class TelaAmigo extends Tela {
         System.out.println();
         printAmarelo("------------AMIGOS------------");
         System.out.println();
-        System.out.println("0 - Voltar");
-        System.out.println("1 - Adicionar");
-        System.out.println("2 - Lista de Amigos");
-        System.out.println("3 - Deletar Amigo");
+        printAmarelo("0");
+        System.out.println(" Voltar");
+        printAmarelo("1");
+        System.out.println(" Adicionar");
+        printAmarelo("2");
+        System.out.println(" Lista de Amigos");
+        printAmarelo("3");
+        System.out.println(" Deletar Amigo");
         printAmarelo("------------------------------");
         System.out.println();
 

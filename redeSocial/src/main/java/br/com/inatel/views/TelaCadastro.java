@@ -2,6 +2,7 @@ package br.com.inatel.views;
 
 import br.com.inatel.Main;
 import br.com.inatel.controllers.UsuarioController;
+import br.com.inatel.utils.FormatoData;
 
 public class TelaCadastro extends Tela {
     public void exibir() {
@@ -19,7 +20,7 @@ public class TelaCadastro extends Tela {
         System.out.print("Senha: ");
         senhaCadastro = Main.sc.nextLine();
         System.out.print("Data de Nascimento: ");
-        dataNascimentoCadastro = Main.sc.nextLine();
+        dataNascimentoCadastro = FormatoData.dataFormatoSql(Main.sc.nextLine());;
 
         verificado = login.criarUsuario(nomeCadastro, emailCadastro, senhaCadastro, dataNascimentoCadastro);
 

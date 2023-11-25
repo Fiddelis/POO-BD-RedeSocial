@@ -1,7 +1,7 @@
 package br.com.inatel.controllers;
 
 import br.com.inatel.models.DAO.UsuarioDAO;
-import br.com.inatel.models.Usuario;
+import br.com.inatel.models.entidades.Usuario;
 
 import java.util.Objects;
 

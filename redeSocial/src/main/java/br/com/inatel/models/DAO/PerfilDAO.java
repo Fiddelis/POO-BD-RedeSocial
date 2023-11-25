@@ -1,6 +1,6 @@
 package br.com.inatel.models.DAO;
 
-import br.com.inatel.models.Perfil;
+import br.com.inatel.models.entidades.Perfil;
 
 import java.sql.SQLException;
 

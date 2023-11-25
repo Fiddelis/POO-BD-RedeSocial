@@ -1,7 +1,7 @@
 package br.com.inatel.controllers;
 
 import br.com.inatel.models.DAO.PerfilDAO;
-import br.com.inatel.models.Perfil;
+import br.com.inatel.models.entidades.Perfil;
 
 public class PerfilController {
     PerfilDAO perfilDAO = new PerfilDAO();
@@ -23,10 +23,12 @@ public class PerfilController {
     }
 
     public void atualizarPerfil(String emailUsuario, String descricao, String localizacao) {
-        if (!existe(emailUsuario)) {
+        if (existe(emailUsuario)) {
             Perfil perfil = new Perfil(descricao, localizacao);
             perfilDAO.updatePerfil(perfil, emailUsuario);
             System.out.println("Perfil atualizado com Sucesso!");
+        } else {
+            System.out.println("Perfil não existe");
         }
     }
 

@@ -1,6 +1,6 @@
 package br.com.inatel.models.DAO;
 
-import br.com.inatel.models.Postagem;
+import br.com.inatel.models.entidades.Postagem;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -33,30 +33,6 @@ public class PostagemDAO extends ConnectionDAO {
                 System.out.println("Erro: " + exc.getMessage());
             }
         }
-    }
-
-    public Postagem selectPostagem(String email) { //Read
-        connectToDB();
-        String sql = "SELECT * FROM `Postagem` WHERE `usuario_email`=?";
-        Postagem postagem = null;
-
-        try {
-            pst = con.prepareStatement(sql);
-            pst.setString(1, email);
-            rs = pst.executeQuery();
-            if(rs != null && rs.next()){
-                postagem = new Postagem(rs.getString("data_publicacao"),rs.getString("conteudo"),rs.getString("usuario_email"));
-            }
-        } catch (SQLException e) {
-            System.out.println("Erro: " + e.getMessage());
-        } finally {
-            try {
-                con.close();
-            } catch (SQLException e) {
-                System.out.println("Erro: " + e.getMessage());
-            }
-        }
-        return postagem;
     }
 
     public ArrayList<Postagem> selectUltimasPostagens() {

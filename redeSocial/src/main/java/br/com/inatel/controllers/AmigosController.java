@@ -1,8 +1,7 @@
 package br.com.inatel.controllers;
 
 import br.com.inatel.models.DAO.AmigosDAO;
-import br.com.inatel.models.Amigos;
-import br.com.inatel.models.DAO.UsuarioDAO;
+import br.com.inatel.models.entidades.Amigos;
 
 import java.util.ArrayList;
 

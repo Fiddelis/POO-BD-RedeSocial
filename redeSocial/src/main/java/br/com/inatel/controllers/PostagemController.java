@@ -1,7 +1,7 @@
 package br.com.inatel.controllers;
 
 import br.com.inatel.models.DAO.PostagemDAO;
-import br.com.inatel.models.Postagem;
+import br.com.inatel.models.entidades.Postagem;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

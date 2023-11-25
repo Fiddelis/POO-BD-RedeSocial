@@ -2,9 +2,8 @@ package br.com.inatel.views;
 
 import br.com.inatel.Main;
 import br.com.inatel.controllers.PostagemController;
-import br.com.inatel.models.Postagem;
-
-import java.util.ArrayList;
+import br.com.inatel.models.entidades.Postagem;
+import br.com.inatel.utils.FormatoData;
 
 public class TelaPostagem extends Tela {
 
@@ -16,9 +15,12 @@ public class TelaPostagem extends Tela {
         System.out.println();
         printAmarelo("-----------POSTAGEM-----------");
         System.out.println();
-        System.out.println("0 - Voltar");
-        System.out.println("1 - Recentes");
-        System.out.println("2 - Postar");
+        printAmarelo("0");
+        System.out.println(" Voltar");
+        printAmarelo("1");
+        System.out.println(" Recentes");
+        printAmarelo("2");
+        System.out.println(" Postar");
         printAmarelo("------------------------------");
         System.out.println();
 
@@ -30,7 +32,7 @@ public class TelaPostagem extends Tela {
                 break;
             case 1:
                 for (Postagem p : postagem.listaPostagens()) {
-                    printCiano(p.getDataPublicacao());
+                    printCiano(FormatoData.dataFormatoExibir(p.getDataPublicacao()));
                     System.out.print(" - ");
                     printAzul(p.getEmailUsuario());
                     System.out.println();

@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `redeSocialBD`.`usuario` (
 CREATE TABLE IF NOT EXISTS `redeSocialBD`.`postagem` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data_publicacao` DATE NOT NULL,
-  `conteudo` VARCHAR(100) NOT NULL,
+  `conteudo` VARCHAR(2000) NOT NULL,
   `usuario_email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_postagem_usuario1_idx` (`usuario_email` ASC) VISIBLE,

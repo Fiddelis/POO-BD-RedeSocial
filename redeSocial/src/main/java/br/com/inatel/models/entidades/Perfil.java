@@ -1,4 +1,4 @@
-package br.com.inatel.models;
+package br.com.inatel.models.entidades;
 
 /**
  *

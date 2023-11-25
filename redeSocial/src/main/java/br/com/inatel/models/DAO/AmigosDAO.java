@@ -1,7 +1,7 @@
 package br.com.inatel.models.DAO;
 
 
-import br.com.inatel.models.Amigos;
+import br.com.inatel.models.entidades.Amigos;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

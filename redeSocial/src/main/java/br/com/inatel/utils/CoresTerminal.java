@@ -1,6 +1,6 @@
 package br.com.inatel.utils;
 
-public class ColorPrinter {
+public class CoresTerminal extends FormatoData {
 
     /**
      * Mostra um texto em azul
@@ -41,4 +41,5 @@ public class ColorPrinter {
     public static void printAmarelo(String label){
         System.out.print("\u001B[33m" + label + "\u001B[0m");
     }
+
 }

@@ -7,19 +7,19 @@ import br.com.inatel.controllers.PostagemController;
 
 public class TelaUsuario extends Tela {
     int escolha;
-    PostagemController postagem = new PostagemController();
-    AmigosController amigo = new AmigosController();
-    PerfilController perfil = new PerfilController();
     public void exibir() {
         System.out.println();
         printAmarelo("-------------MENU-------------");
         System.out.println();
-        System.out.println("0 - Sair");
-        System.out.println("1 - Postagem");
-        System.out.println("2 - Perfil");
-        System.out.println("3 - Amigos");
+        printAmarelo("0");
+        System.out.println(" Sair");
+        printAmarelo("1");
+        System.out.println(" Postagem");
+        printAmarelo("2");
+        System.out.println(" Perfil");
+        printAmarelo("3");
+        System.out.println(" Amigos");
         printAmarelo("------------------------------");
-        System.out.println();
         System.out.println();
         escolha = Main.sc.nextInt();
         Main.sc.nextLine();
